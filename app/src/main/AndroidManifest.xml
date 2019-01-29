@@ -15,7 +15,7 @@
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
-                <data android:scheme="testapp" android:host="repos" />
+                <data android:scheme="testapp" android:host="repos" android:pathPattern="*" />
             </intent-filter>
         </activity>
     </application>
