@@ -2,6 +2,7 @@ package com.example.homework
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import com.example.homework.base.BaseActivity
 import com.example.homework.model.Repos
 import com.example.homework.model.User
@@ -17,7 +18,8 @@ class ReposActivity : BaseActivity(), ReposView{
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_repos)
 
-        username = intent.data?.path ?: ""
+        username = intent.data?.lastPathSegment ?: ""
+        Log.e("username", username)
 
         reposAdapter = ReposAdapter()
         recycler_repos.adapter = reposAdapter
