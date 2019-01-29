@@ -17,7 +17,7 @@ class ReposActivity : BaseActivity(), ReposView{
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_repos)
 
-        val username = intent.data?.path ?: ""
+        username = intent.data?.path ?: ""
 
         reposAdapter = ReposAdapter()
         recycler_repos.adapter = reposAdapter
